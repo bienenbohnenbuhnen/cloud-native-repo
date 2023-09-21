@@ -1,0 +1,34 @@
+Commands
+
+//Sets up new product service folder with dependencies included, then runs it on a port
+dontnet new web -n ProductService
+dotnet run
+
+//Mapping CRUD endpoints to ensure they work
+Endpoints:
+
+GET all products
+http://localhost:5179/api/products
+
+GET certain product
+http://localhost:5179/api/products/{id}
+
+POST new product
+http://localhost:5179/api/products
+{
+    id: 4,
+    Name: "Product D",
+    Price: 45.99m
+}
+
+PUT update a product
+http://localhost:5179/api/products/{id}
+
+{
+    id: 4,
+    Name: "Product DD",
+    Price: 45.99m
+}
+
+DELETE
+http://localhost:5179/api/products/{id}
